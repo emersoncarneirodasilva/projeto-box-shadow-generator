@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/icons8-caixa-64.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src="./assets/js/scripts.js" defer></script>
+    <title>Box Shadow Generator</title>
+  </head>
+  <body>
+    <div id="wrapper" class="wrapper">
+      <div class="object-container">
+        <div id="object" class="object"></div>
+      </div>
+      <div id="controller" class="controller">
+        <h1>Shadow Generator</h1>
+        <!-- Direção X -->
+        <div class="control-el">
+          <span>X Direction</span>
+          <div class="input-fields">
+            <input
+              id="xDirection"
+              type="range"
+              min="-120"
+              max="120"
+              value="8"
+            />
+            <input
+              id="xDirectionNum"
+              type="number"
+              min="-120"
+              max="120"
+              value="8"
+            />
+          </div>
+        </div>
+        <!-- Direção Y -->
+        <div class="control-el">
+          <span>Y Direction</span>
+          <div class="input-fields">
+            <input
+              id="yDirection"
+              type="range"
+              min="-120"
+              max="120"
+              value="8"
+            />
+            <input
+              id="yDirectionNum"
+              type="number"
+              min="-120"
+              max="120"
+              value="8"
+            />
+          </div>
+        </div>
+        <!-- Borrão -->
+        <div class="control-el">
+          <span>Blur</span>
+          <div class="input-fields">
+            <input id="blur" type="range" min="0" max="75" value="10" />
+            <input id="blurNum" type="number" min="0" max="75" value="10" />
+          </div>
+        </div>
+        <!-- Raio de propagação -->
+        <div class="control-el">
+          <span>Spread Radius</span>
+          <div class="input-fields">
+            <input id="spread" type="range" min="-75" max="75" value="5" />
+            <input id="spreadNum" type="number" min="-75" max="75" value="10" />
+          </div>
+        </div>
+        <!-- Opacidade -->
+        <div class="control-el">
+          <span>Opacity</span>
+          <div class="input-fields">
+            <input
+              id="opacity"
+              type="range"
+              min="0"
+              max="1"
+              value="0.75"
+              step="0.01"
+            />
+            <input
+              id="opacityNum"
+              type="number"
+              min="0"
+              max="1"
+              value="0.75"
+              step="0.01"
+            />
+          </div>
+        </div>
+        <!-- Controle de cores -->
+        <div class="control-el control-color">
+          <div class="shadow-color">
+            <span>Shadow Color</span>
+            <div class="input-fields">
+              <input id="shadowColor" type="color" value="#000000" />
+              <input id="shadowColorNum" type="text" value="#000000" />
+            </div>
+          </div>
+          <div class="background-color">
+            <span>Background Color</span>
+            <div class="input-fields">
+              <input id="backgroundColor" type="color" value="#4b48ea" />
+              <input id="backgroundColorNum" type="text" value="#4b48ea" />
+            </div>
+          </div>
+        </div>
+        <!-- Caixa de seleção de controle -->
+        <div class="control-el control-checkbox">
+          <div class="inset">
+            <span>Inset</span>
+            <input id="inset" type="checkbox" />
+          </div>
+          <div class="check-background">
+            <span>Same Background</span>
+            <input id="checkBackground" type="checkbox" checked />
+          </div>
+        </div>
+        <!-- Mostrador -->
+        <div class="display-container">
+          <div class="display-el">
+            <span class="display-property">box-shadow</span>
+            <span id="displayShadow" class="display-value"
+              >: 8px 21px 8px 0px rgba(0, 0, 0, 0.75);</span
+            >
+          </div>
+          <div class="display-el">
+            <span class="display-property">-webkit-box-shadow</span>
+            <span id="webkitDisplayShadow" class="display-value"
+              >: 8px 21px 8px 0px rgba(0, 0, 0, 0.75);</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
